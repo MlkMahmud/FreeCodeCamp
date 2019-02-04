@@ -1,0 +1,93 @@
+body{
+    background-color: 	#F8F8FF;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    overflow-wrap: normal;
+}
+
+#container{
+    display: grid;
+    height: 100%;
+    grid-template: 100% /300px 1fr;
+}
+#navbar{
+    height: 100vh;
+    position: sticky;
+    border-right: 2px solid gray;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+
+
+#navbar header{
+    height: 80px;
+    line-height: 80px;
+    background: 	#F8F8FF;
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+}
+
+.nav-link{
+    display: block;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid lightslategrey;
+}
+
+#main-doc{
+    background:	#F8F8FF;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.main-section{
+    margin: 10px 0;
+}
+.main-section header{
+    text-align: left;
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.main-section p{
+    margin-left: 20px;
+}
+
+.main-section ul li{
+    margin-bottom: 10px;
+}
+
+.main-section .code{
+    width: 90%;
+    margin: 5px auto;
+    text-align: left;
+    padding: 10px;
+    background: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+@media(max-width: 800px){
+    #container{
+        grid-template: auto / repeat(auto-fill, 100%); 
+        grid-gap: 20px;
+    }
+
+    #navbar{
+        height: 280px;
+        position: static;
+        border: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
